@@ -14,20 +14,4 @@ module.exports = function(app) {
         friends.push(request.body)
         console.log(friends);
     })
-}
-   
-
-    
-    // apiRoutes.POST("/api/friends", function(request, response) {
-    //         // req.body hosts is equal to the JSON post sent from the user
-    //         // This works because of our body parsing middleware
-    //         var newFriend = request.body;
-    //         console.log(newFriend);
-          
-    //         friends.push(newFriend);
-          
-    //         response.json(friends);
-    // });
-  
-
-
+};

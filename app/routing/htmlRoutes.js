@@ -12,7 +12,7 @@ const routes = express.Router();
     response.sendFile(path.join(__dirname, "../public/home.html"))
     });
 
-module.exports = routes
+module.exports = routes;
 
 
 

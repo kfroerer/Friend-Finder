@@ -216,10 +216,12 @@
           };
         console.log(newFriend);
         
-        $.post("/api/friends", newFriend)
-        .then(function(data) {
-            console.log("survey.html", data);
+        $.post("/api/friends", newFriend, function(data) {
+            //solution sends name, photo to html  $(id).text(data.name);
+            //$(#photo).attr(src, data.photo)  has a modal  which shows after submit
+            console.log(data);
             alert("Adding character...");
+
         });
     });
 </script>
