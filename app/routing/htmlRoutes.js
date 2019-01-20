@@ -1,22 +1,15 @@
-var express = require('express');
-var path = require('path');
+var path = require("path");
+var router = require("express").Router();
 
-const routes = express.Router();
-    routes.get("/survey", function(request, response) {
-    
-    response.sendFile(path.join(__dirname, "../public/survey.html"))
-        });
-    
-    routes.get("/", function(request, response) {
-    
-    response.sendFile(path.join(__dirname, "../public/home.html"))
-    });
+router.get("/", function(request, response) {
+    response.sendFile(path.join(__dirname, "../public/home.html"));
+});
 
-module.exports = routes;
+router.get("/survey", function(request, response) {
+    response.sendFile(path.join(__dirname, "../public/survey.html"));
+});
 
-
-
-
+module.exports = router;
 
 
 
